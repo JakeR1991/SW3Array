@@ -2,28 +2,31 @@ import java.util.Scanner;
 
 public class OddNumbers {
     public static void main(String[] args) {
-        // Create a Scanner object for user input
-        Scanner scan = new Scanner(System.in);
-
-        // Create an array to store the input numbers
+        //1. Declare an array with length 10 - Jake
         int[] numbers = new int[10];
 
-        // Loop to take 10 integer inputs from the user
-        for (int i = 0; i < 10; i++) {
-            System.out.print("Enter a number: ");
-            numbers[i] = scan.nextInt();
+        //2. Create scanner object and import scanner class - Jake
+        Scanner reader = new Scanner(System.in);
+        //3. Get user input, store in array using for loop - Bob
+        System.out.println("Enter 10 numbers = ");
+        for (int i = 0; i < numbers.length; i++) {
+            numbers[i] = reader.nextInt();
         }
 
-        // Print "Odd numbers: "
-        System.out.print("Odd numbers: ");
-
-        // Loop to check for odd numbers and print
-        for (int i = 0; i < 10; i++) {
-            // Check if the number is odd using the formula numbers[i] % 2 != 0
-            if (numbers[i] % 2 != 0) {
-                // Print the odd number
+        //4. Print the value of the array, use for loop or for each loop -Laura
+        System.out.println("The resulted array is: ");
+        for(int i:numbers){
+            System.out.print(i + " ");
+        }
+        //. Print only odd values, use for loop to access array index - Bence
+        System.out.println();
+        System.out.println("The odd values are : ");
+        for (int i = 0; i < numbers.length; i++)
+        {
+            if (numbers[i] % 2 !=0 ) {
                 System.out.print(numbers[i] + " ");
             }
         }
+
     }
 }
